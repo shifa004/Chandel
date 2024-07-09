@@ -1,0 +1,142 @@
+<!--Shifa Mhaskar - 60099580-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>Subscribe</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/print.css" media="print">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="../images/fav-icon.png">
+
+    <!-- Java script -->
+    <script defer src="../js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <img src="../images/logo-header.jpg" alt="Header Image">
+        </h1>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="../php/products.php">Products</a>
+            <a href="../php/orders.php">Orders</a>
+            <a href="subscribe.html">Subscribe</a>
+            <a href="../php/login.php">Log In</a>
+        </nav>
+    </header>
+
+    <section>
+        <form action="../php/subscribe.php" method="POST" onsubmit="return validateForm();">
+            <label for="fullname">Enter your name:</label>
+            <input type="text" name="fullname" id="fullname" onblur="validateName()">
+            <br><br>
+            <label for="username">Username: </label>
+            <input type="text" name="username" id="username" onblur="validateUserName()">
+            <br><br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" onblur="validatePassword()">
+            <span id='passError'></span>
+            <br><br>
+            <label for="cpassword">Confirm your Password:</label>
+            <input type="password" name="cpassword" id="cpassword" onblur="validateCPassword()">
+            <br>
+            <span id="cpassError"></span>
+            <br><br>
+            <label for="email">Enter your Email:</label>
+            <input type="text" name="email" id="email" onblur="validateEmail()">
+            <br>
+            <span id="emailError"></span>
+            <br><br>
+            <label for="building">Building Number:</label>
+            <input type="text" name="building" id="building" onblur="validateBuilding('building')">
+            <br>
+            <span id="buildError"></span>
+            <br><br>
+            <label for="street">Street Name:</label>
+            <input type="text" name="street" id="street" onblur="validateStreet()">
+            <br><br>
+            <label for="city">
+                Enter your city:
+            </label>
+            <select name="city" id="city" onblur="validateCity()">
+                <option value="">Select a city</option>
+                <option value="Doha">Doha</option>
+                <option value="Wakra">Al Wakra</option>
+                <option value="Khor">Al Khor</option>
+                <option value="Al Rayyan">Al Rayyan</option>
+                <option value="Mesaieed">Mesaieed</option>
+            </select>
+            <br>
+            <span id="cityError"></span>
+            <br><br>
+            <label for="phone">Contact Number:</label>
+            <input type="tel" name="phone" id="phone" placeholder="1234 5678" onblur="validatePhone()">
+            <br>
+            <span id="phoneError"></span>
+            <br><br>
+            <label>Preferred method of contact: </label>
+            <br><br>
+            <label>
+                Call <input type="radio" name="method" value="Call" id="call" onclick="validatePreferred();">
+            </label>
+            <label>
+                Email <input type="radio" name="method" value="Email" id="email1" onclick="validatePreferred();">
+            </label>
+            <label>
+                Any <input type="radio" name="method" value="Any" id="any" onclick="validatePreferred();">
+            </label>
+            <span id="radioError"></span>
+            <br><br>
+            <input type="submit" name="" value="Sign Up">
+            <input type="reset" value="Cancel">
+        </form>
+    </section>
+
+    <footer>
+        <div class="image-footer">
+            <img src="../images/logo-footer.jpg">
+        </div>
+
+        <div class="contact">
+            <i class="fa fa-phone icons"></i>
+            <span>
+                <p class="title">Talk to us<br><a href="tel: +974 12345678">+974 12345678</a></p>
+            </span>
+        </div>
+
+        <div class="contact">
+            <i class="fa fa-envelope icons"></i>
+            <span>
+                <p class="title">Write to us<br><a href="mailto: chandel@gmail.com" class="email">chandel@gmail.com</a>
+                </p>
+            </span>
+        </div>
+
+        <div class="contact">
+            <i class="fa fa-question icons"></i>
+            <span>
+                <p class="title">Visit us<br>Al Muntazah, Doha, Qatar</p>
+            </span>
+        </div>
+
+        <span class="copyright">
+            <p>&copy; Copyright 2020 - Chandel</p>
+        </span>
+    </footer>
+</body>
+
+</html>

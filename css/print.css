@@ -1,0 +1,38 @@
+/* Shifa Mhaskar - 60099580  */
+
+*{
+	text-align: center;
+	font-size: 22px;
+}
+
+h1{
+	font-size: 35px;
+}
+
+nav, .container, .slides, .img-footer, .contact, figcaption, .testimonial img{
+	display: none;
+}
+
+@page{
+	size: A4 portrait;
+	margin: 0.3in;
+}
+
+article{
+	page-break-after: always;
+	page-break-inside: avoid;
+}
+
+.products{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+.col{
+	display: block;
+	width: 100%;
+	padding: 0px;
+}
+
